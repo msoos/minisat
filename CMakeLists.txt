@@ -93,7 +93,7 @@ endif()
 if (NOT MSVC)
     add_compile_options( -g)
     add_compile_options( -pthread )
-
+    add_compile_options( -fPIC )
     add_compile_options("$<$<CONFIG:RELWITHDEBINFO>:-O2>")
 
     add_compile_options("$<$<CONFIG:RELEASE>:-O2>")
