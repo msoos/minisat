@@ -40,12 +40,7 @@ add_cxx_flag_if_supported("-Wno-class-memaccess")
 
 
 #--------------------------------------------------------------------------------------------------
-option(STATICCOMPILE "Compile static library and executable" OFF)
-
 option(BUILD_SHARED_LIBS "Build the shared library" ON)
-if (STATICCOMPILE)
-    set(BUILD_SHARED_LIBS OFF)
-endif()
 
 if (NOT BUILD_SHARED_LIBS)
     if (NOT MSVC)
